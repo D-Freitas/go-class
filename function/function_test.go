@@ -14,6 +14,11 @@ func TestFunction(t *testing.T) {
 		assert.Equal(20, resultado)
 	})
 
+	t.Run("deveria retornar zero se o number1 for zero na função de soma", func(t *testing.T) {
+		resultado := Soma(0, 10)
+		assert.Equal(0, resultado)
+	})
+
 	t.Run("deveria retornar zero se o number2 for zero na função de soma", func(t *testing.T) {
 		resultado := Soma(10, 0)
 		assert.Equal(0, resultado)
